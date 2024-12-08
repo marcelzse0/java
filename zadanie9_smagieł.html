@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+ <head><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="},"id":{"website":"9481b0b7-7c3d-463b-8f3c-9de5c8289e21"}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+ <script type="text/javascript"> 
+ function show_prompt() 
+ { 
+ var name=prompt("Napisz imię i nazwisko","Imię Nazwisko"); 
+ if (name!=null && name!="") 
+ { 
+ document.write("Witaj " + name + "! jak się masz?"); 
+ } 
+ } 
+ </script> 
+</head> 
+<body>
+<b>Zastosowanie:</b><br>
+Jest używany kiedy użytkownik ma wpisać coś np. zanim wejdzie w dany moduł strony. Np. hasło.<br>
+Użytkownik po wpisaniu wartość może nacisnął „OK.” albo „Cancel” Jeżeli użytkownik kliknie „OK.”<br>
+metoda zwraca wpisaną wartość, a w przeciwnym wypadku zwraca null.<br>
+ <input type="button" onclick="show_prompt()" value="Pokaż prompt box" /> 
+ </body> 
+</html> 

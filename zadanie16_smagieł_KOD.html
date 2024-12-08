@@ -1,0 +1,41 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_smagiel()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="smagiel" cols="80" rows="26" disabled>
+<!DOCTYPE html>
+<head>
+<title> proste obliczenia</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size: 50px;">
+<script lang="JavaScript">
+        var liczba1=prompt("podaj a=","");
+        var a_smagiel=parseFloat(liczba1);
+        var liczba2=prompt("podaj b=","");
+        var b_smagiel=parseFloat(liczba2);
+document.write("a="+a_smagiel+"<br>");
+document.write("b="+b_smagiel+"<br>");
+document.write("("+a_smagiel+"+"+b_smagiel+")^3=");
+document.write(+a_smagiel+"^"+"3+3*"+a_smagiel+"^2*"+b_smagiel+"+3*"+a_smagiel+"*"+b_smagiel+"^2+"+b_smagiel+"^"+"3"+"=");
+document.write(+a_smagiel*a_smagiel*a_smagiel+3*(a_smagiel*a_smagiel)*b_smagiel+3*a_smagiel*(b_smagiel*b_smagiel)+b_smagiel*b_smagiel*b_smagiel);
+</script>
+</div>
+</body>
+</html>
+ 
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_smagiel()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
