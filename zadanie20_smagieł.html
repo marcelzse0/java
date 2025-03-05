@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>zad20</title>
+</head>
+<body>
+<script>
+function odleglosc(x1, y1, x2, y2) {
+return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+function AB_sma() {
+var xa=parseFloat(document.getElementById('xa_sma').value);
+var ya=parseFloat(document.getElementById('ya_sma').value);
+var xb=parseFloat(document.getElementById('xb_sma').value);
+var yb=parseFloat(document.getElementById('yb_sma').value);
+var ab=odleglosc(xa, ya, xb, yb);
+document.getElementById("wynik").innerHTML = "Długość AB = " + ab.toFixed(2) + " cm";
+}
+        
+function BC_sma() {
+var xb=parseFloat(document.getElementById('xb_sma').value);
+var yb=parseFloat(document.getElementById('yb_sma').value);
+var xc=parseFloat(document.getElementById('xc_sma').value);
+var yc=parseFloat(document.getElementById('yc_sma').value);
+var bc=odleglosc(xb, yb, xc, yc);
+document.getElementById("wynik").innerHTML = "Długość BC = " + bc.toFixed(2) + " cm";
+}
+        
+function AC_sma() {
+var xa=parseFloat(document.getElementById('xa_sma').value);
+var ya=parseFloat(document.getElementById('ya_sma').value);
+var xc=parseFloat(document.getElementById('xc_sma').value);
+var yc=parseFloat(document.getElementById('yc_sma').value);
+var ac=odleglosc(xa, ya, xc, yc);
+document.getElementById("wynik").innerHTML = "Długość AC = " + ac.toFixed(2) + " cm";
+}
+</script>
+
+<h1>Obliczanie długości boków trójkąta</h1>
+Punkt A (xa, ya):
+<input type="text" id="xa_sma"> <input type="text" id="ya_sma"><br><br>
+    
+Punkt B (xb, yb):
+<input type="text" id="xb_sma"> <input type="text" id="yb_sma"><br><br>
+    
+Punkt C (xc, yc):
+<input type="text" id="xc_sma"> <input type="text" id="yc_sma"><br><br>
+    
+<input type="button" value="Oblicz AB" onclick="AB_sma()">
+<input type="button" value="Oblicz BC" onclick="BC_sma()">
+<input type="button" value="Oblicz AC" onclick="AC_sma()">
+    
+<h2>Wyniki:</h2>
+<div id="wynik" style="color: red; font-size: 20px;"></div>
+</body>
+</html>
