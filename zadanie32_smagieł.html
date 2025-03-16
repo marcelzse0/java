@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript">
+function Komputer(marka, procesor, ram, dysk) {
+this.marka = marka;
+this.procesor = procesor;
+this.ram = ram;
+this.dysk = dysk;
+}
+Komputer.prototype.Komputer_wyswietl_smagieł = function() {
+document.write("Obiekt: Komputer<br>");
+document.write("Marka: " + this.marka + "<br>");
+document.write("Procesor: " + this.procesor + "<br>");
+document.write("RAM: " + this.ram + "<br>");
+document.write("Dysk: " + this.dysk + "<br>");
+document.write("Metoda: Komputer_wyswietl_smagieł<br><br>");
+};
+var komputer1 = new Komputer("Dell", "Intel i5", "8GB", "500GB HDD");
+var komputer2 = new Komputer("HP", "Intel i7", "16GB", "1TB SSD");
+var komputer3 = new Komputer("Asus", "AMD Ryzen 5", "16GB", "512GB SSD");
+
+komputer1.Komputer_wyswietl_smagieł();
+komputer2.Komputer_wyswietl_smagieł();
+komputer3.Komputer_wyswietl_smagieł();
+
+komputer1.przebieg = "10,000 godzin";
+komputer2.przebieg = "5,000 godzin";
+komputer3.przebieg = "2,500 godzin";
+
+Komputer.prototype.Komputer_pokaz_smagieł = function() {
+document.write("Nowe pole to przebieg: " + this.przebieg + "<br>");
+document.write("Nowa metoda to Komputer_pokaz_smagieł<br><br>");
+};
+
+komputer1.Komputer_pokaz_smagieł();
+komputer2.Komputer_pokaz_smagieł();
+
+komputer3.Komputer_pokaz_smagieł();
+</script>
+</head>
+<body>
+</body>
+</html>

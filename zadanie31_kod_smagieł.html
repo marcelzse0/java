@@ -1,0 +1,46 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_smagiel()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="smagiel" cols="66" rows="28" disabled>
+<html>
+<head>
+<script type="text/javascript">
+var Komputer = {
+marka: 'Dell',
+procesor: 'Intel i7',
+ram: '16GB',
+Komputer_wyswietl_smagieł: function() {
+document.write('Obiekt: Komputer<br>');
+document.write('Marka: ' + this.marka + '<br>');
+document.write('Procesor: ' + this.procesor + '<br>');
+document.write('RAM: ' + this.ram + '<br>');
+document.write('Metoda: Komputer_wyswietl_smagieł<br>');
+}
+};
+Komputer.Komputer_wyswietl_smagieł();
+Komputer.kartagr = 'rtx 3080';
+Komputer.Komputer_pokaz_smagieł = function() {
+document.write("Nowe pole to procesor: " + this.kartagr + "<br>");
+document.write("Nowa metoda to Komputer_pokaz_smagieł<br>");
+};
+Komputer.Komputer_pokaz_smagieł();
+</script>
+</head>
+<body>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_smagiel()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
