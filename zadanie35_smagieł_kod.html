@@ -1,0 +1,37 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_smagiel()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+<form>
+<textarea name="smagiel" cols="55" rows="19" disabled>
+<html>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+var a_dana_sma = prompt("Podaj liczbę x =", "");
+var a = parseFloat(a_dana_sma);
+document.write("Czytana liczba x = " + a + "<br>");
+if (a > 0) {
+document.write("Czytana liczba jest większa od 0<br>");
+} else if (a == 0) {
+document.write("Czytana liczba jest równa 0<br>");
+} else {
+document.write("Czytana liczba jest mniejsza od 0<br>");
+}
+</script>
+</div>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_smagiel()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

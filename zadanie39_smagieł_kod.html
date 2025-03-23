@@ -1,0 +1,41 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_smagiel()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+<form>
+<textarea name="smagiel" cols="83" rows="24" disabled>
+<html>
+<body>
+<div style="color:red; font-size:50px;">
+<script language="JavaScript">
+function fun_sma() {
+var x_sma = prompt("Podaj kolor (1 - czerwony, 2 - niebieski):", "");
+if(x_sma == 1 || x_sma.toLowerCase() == "czerwony") {
+document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />'); }
+else if(x_sma == 2 || x_sma.toLowerCase() == "zielony") {
+document.write('<h6 style="color:blue;">wczytałeś kolor niebieski</h6><br />');
+} else {
+document.write('<h1 style="color:black; font-size:5">Błędny kolor lub cyfra</h1><br>');
+}
+}
+</script>
+<h8 style="color:green;">MENU</h8><br><br>
+<h8 style="color:red;">1-CZERWONY</h8><br>
+<h8 style="color:blue;">2-NIEBIESKI</h8><br><br>
+<input type="button" name="nazwisko_ucznia" value="Oblicz" onclick="fun_sma()" />
+</div>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_smagiel()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
