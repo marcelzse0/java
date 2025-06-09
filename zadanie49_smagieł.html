@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+  
+  <script>
+    let n_sma = prompt("Podaj liczbę n (całkowita nieujemna):");
+    n_sma = parseInt(n_sma);
+
+    if (isNaN(n_sma) || n_sma < 0) {
+      document.write("Błąd: Podaj liczbę całkowitą nieujemną.");
+    } else {
+      let silnia_sma = 1;
+      
+      if (n_sma > 0) {
+        for (let i_sma = 1; i_sma <= n_sma; i_sma++) {
+          silnia_sma *= i_sma;
+        }
+      }
+      document.write(n_sma + "! = " + silnia_sma);
+    }
+  </script>
+
+  <br><br>
+  <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

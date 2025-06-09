@@ -1,0 +1,50 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_smagiel()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+<form>
+<textarea name="smagiel" cols="55" rows="37" disabled>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Smagieł-Marcel-Zadanie52</title>
+</head>
+<body>
+<div style="font-family: monospace; font-size: 16px;">
+    <script language="JavaScript">
+        var a_sma = ("Smagiel".length % 4) + 5;
+        var b_sma = ("Marcel".length % 6) + 20;
+
+        for (var i = 0; i < b_sma; i++) document.write("*");
+        document.write("<br>");
+
+        for (var j = 0; j < a_sma - 2; j++) {
+            document.write("*");
+            for (var i = 0; i < b_sma - 2; i++) document.write("&nbsp;");
+            document.write("*<br>");
+        }
+
+        for (var i = 0; i < b_sma; i++) document.write("*");
+    </script>
+</div>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
+  <br><br>
+  <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_smagiel()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

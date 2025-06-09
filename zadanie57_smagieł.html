@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Zadanie 57 — Smagieł Marcel</title>
+    <style>
+        body { font-family: monospace; font-size: 18px; }
+        #wynik_sma { white-space: pre; margin-bottom: 1em; }
+        button { font-size: 16px; padding: 0.3em 1em; }
+    </style>
+</head>
+<body>
+
+<h1>Zadanie 57 — Liczby, pierwiastki drugiego i czwartego stopnia</h1>
+
+<div id="wynik_sma"></div>
+<button id="przyciskDalej_sma" style="display:none;">Kontynuuj</button>
+
+<script>
+
+    let wyjscie_sma = document.getElementById('wynik_sma');
+    let przycisk_sma = document.getElementById('przyciskDalej_sma');
+
+    let licznik_sma = 24; // numer w dzienniku
+    const maxLicznik_sma = 39; // do nr+15
+    const ileNaRaz_sma = 3;
+
+    function pokazLinie_sma() {
+        let wypisane_sma = 0;
+        while (licznik_sma <= maxLicznik_sma && wypisane_sma < ileNaRaz_sma) {
+
+            let pierw_2_sma = Math.sqrt(licznik_sma);
+            let pierw_4_sma = Math.sqrt(pierw_2_sma);
+
+            wyjscie_sma.textContent += "I=" + licznik_sma + "\n";
+            wyjscie_sma.textContent += "pierw_2(" + licznik_sma + ")=" + pierw_2_sma.toFixed(2) + "\n";
+            wyjscie_sma.textContent += "pierw_4(" + licznik_sma + ")=" + pierw_4_sma.toFixed(2) + "\n\n";
+
+            licznik_sma++;
+            wypisane_sma++;
+        }
+
+        if (licznik_sma <= maxLicznik_sma) {
+            przycisk_sma.style.display = "inline-block";
+        } else {
+            przycisk_sma.style.display = "none";
+        }
+    }
+
+    przycisk_sma.addEventListener("click", function() {
+        przycisk_sma.style.display = "none";
+        pokazLinie_sma();
+    });
+
+    pokazLinie_sma();
+
+</script>
+
+<br>
+<input type="button" value="zamknij okno" onclick="window.close()" />
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Sprawdzanie trójkąta - Smagieł</title>
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        var a_sma, b_sma, c_sma;
+        do {
+            a_sma = parseFloat(prompt("Podaj bok a:",""));
+            b_sma = parseFloat(prompt("Podaj bok b:",""));
+            c_sma = parseFloat(prompt("Podaj bok c:",""));
+        } while (!(a_sma > 0 && b_sma > 0 && c_sma > 0 &&
+                   a_sma + b_sma > c_sma &&
+                   a_sma + c_sma > b_sma &&
+                   b_sma + c_sma > a_sma));
+
+        document.write("Podano poprawne boki trójkąta:<br>");
+        document.write("a = "+a_sma+"<br>");
+        document.write("b = "+b_sma+"<br>");
+        document.write("c = "+c_sma+"<br>");
+    </script>
+</div>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

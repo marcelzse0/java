@@ -1,0 +1,44 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_smagiel()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+<form>
+<textarea name="smagiel" cols="55" rows="31" disabled>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Smagieł - Zadanie44</title>
+</head>
+<body>
+<div style="color:green;">
+<script>
+let dl_nazwiska_sma = "Smagieł".length;
+let ile_razy_sma = (dl_nazwiska_sma % 4) + 10;
+let rozmiar_sma = (dl_nazwiska_sma % 3) + 40;
+document.write("Ilość wykonania pętli = " + ile_razy_sma + "<br>");
+document.write("Wielkość liter = " + rozmiar_sma + "px<br><br>");
+for (let i_sma = 1; i_sma <= ile_razy_sma; i_sma++) {
+    if (i_sma % 2 === 0) {
+        document.write("<span style='font-size:" + rozmiar_sma + "px;'>Marcel</span><br>");
+    } else {
+        document.write("<span style='font-size:" + rozmiar_sma + "px;'>Smagieł</span><br>");
+    }
+}
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_smagiel()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

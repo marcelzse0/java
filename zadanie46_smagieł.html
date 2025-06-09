@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Smagieł-Marcel-Zadanie46</title>
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        var h_sma, a_sma;
+        do {
+            h_sma = parseFloat(prompt("Podaj wysokość:", ""));
+        } while (h_sma <= 0);
+        do {
+            a_sma = parseFloat(prompt("Podaj podstawę:", ""));
+        } while (!(a_sma > 0));
+        var pole_sma = a_sma * h_sma / 2;
+        document.write("Pole = "+pole_sma.toFixed(2)+" cm²<br>");
+    </script>
+</div>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<title>Zadanie 56 – Liczby pierwsze wzorem | Smagieł Marcel</title>
+<style>
+  body { font-family: monospace; font-size: 18px; }
+  #wynik_sma { white-space: pre; margin-bottom: 1em; }
+  button { font-size: 16px; padding: 0.3em 1em; }
+</style>
+</head>
+<body>
+
+<h1>Zadanie 56 – Liczby pierwsze wzorem w(i)=i² + i + 41</h1>
+
+<div id="wynik_sma"></div>
+<button id="przyciskDalej_sma" style="display:none;">Kontynuuj</button>
+
+<script>
+
+  function czyLiczbaPierwsza_sma(liczba_sma) {
+    if (liczba_sma < 2) {
+      return false;
+    }
+    if (liczba_sma === 2) {
+      return true;
+    }
+    if (liczba_sma % 2 === 0) {
+      return false;
+    }
+    let limit_sma = Math.floor(Math.sqrt(liczba_sma));
+    for (let dzielnik_sma = 3; dzielnik_sma <= limit_sma; dzielnik_sma += 2) {
+      if (liczba_sma % dzielnik_sma === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  let wyjscie_sma = document.getElementById('wynik_sma');
+  let przycisk_sma = document.getElementById('przyciskDalej_sma');
+
+  let licznik_sma = 0;
+  const maxLicznik_sma = 39;
+  const ileNaRaz_sma = 5;
+
+  function pokazLinie_sma() {
+    let wypisane_sma = 0;
+    while (licznik_sma <= maxLicznik_sma && wypisane_sma < ileNaRaz_sma) {
+      let wartosc_sma = licznik_sma*licznik_sma + licznik_sma + 41;
+      let tekst_sma = "i=" + licznik_sma + "  w(" + licznik_sma + ")=" + wartosc_sma;
+      if (!czyLiczbaPierwsza_sma(wartosc_sma)) {
+        tekst_sma += " (!!! NIE PIERWSZA !!!)";
+      }
+      wyjscie_sma.textContent += tekst_sma + "\n";
+      licznik_sma++;
+      wypisane_sma++;
+    }
+
+    if (licznik_sma <= maxLicznik_sma) {
+      przycisk_sma.style.display = "inline-block";
+    } else {
+      przycisk_sma.style.display = "none";
+    }
+  }
+
+  przycisk_sma.addEventListener("click", function() {
+    przycisk_sma.style.display = "none";
+    pokazLinie_sma();
+  });
+
+  pokazLinie_sma();
+
+</script>
+
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
